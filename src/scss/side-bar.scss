@@ -1,0 +1,124 @@
+$side-bar-colors: (
+        background: #192134,
+        border-top: #232b3f,
+        border-bottom: #0c111f
+);
+$marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
+
+.side-bar__add-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15%;
+  border-bottom: 1px solid map-get($side-bar-colors, border-bottom);
+  background-color: map-get($side-bar-colors, background);
+}
+
+.side-bar__add-book__button {
+  width: 80%;
+  height: 38%;
+  font-size: 1vw;
+  border-radius: 0.1vw;
+  background-color: #f2795a;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 26px;
+  color: white;
+  outline:none;
+  border: none;
+}
+
+.side-bar__menu {
+  margin: 3% 0 0 0;
+  color: #78829d;
+  padding: 0;
+  height: 35%;
+  background-color: map-get($side-bar-colors, background);
+  border-top: 1px solid map-get($side-bar-colors, border-top);
+  border-bottom: 1px solid map-get($side-bar-colors, border-bottom);
+
+  li {
+    line-height: 2;
+    list-style: none;
+    height: 16%;
+  }
+
+  a {
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+
+    &:visited {
+      color: #78829d;
+    }
+
+    &:hover {
+      background-color: #0da5fa;
+      color: white;
+    }
+  }
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    margin: 0 2% 0 5%;
+  }
+}
+
+.side-bar__menu--markers{
+  @extend .side-bar__menu;
+  height: 20%;
+
+  li {
+    height: 25%;
+  }
+
+  i {
+    font-size: 0.5vw;
+  }
+
+  @for $i from 1 through 4 {
+    li:nth-child(#{$i}) {
+      a > i {
+        color: nth($marker-colors, $i);
+      }
+    }
+  }
+}
+
+.side-bar__last-updates {
+  display: flex;
+  flex-direction: column;
+  margin: 3% 0 0 0;
+  background-color: map-get($side-bar-colors, background);
+  border-top: 1px solid map-get($side-bar-colors, border-top);
+  height: 42%;
+  color: #485469;
+  padding: 0;
+
+  li {
+    display: flex;
+    list-style: none;
+    margin-top: 10%;
+  }
+
+  i {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    margin: 0 2% 0 5%;
+  }
+
+  span {
+    width: 70%;
+
+    & > pre {
+      font-family: 'Proxima Nova Rg';
+    }
+  }
+}
+

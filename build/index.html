@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header__markers">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+        <div class="main-header__title">
+            <i class="fas fa-book"></i>MyBookApp
+        </div>
+        <ul class="main-header__info">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Our Support</a></li>
+            <li><img src="images/avatar-01.png">John Doe <i class="fas fa-check-circle"></i></li>
+        </ul>
+    </header>
+    <main>
+        <aside class="side-bar">
+            <div class="side-bar__add-book">
+                <button class="side-bar__add-book__button">+ ADD BOOK</button>
+            </div>
+            <menu class="side-bar__menu">
+                <li><a href="#"><i class="fas fa-book"></i> Now Reading</a></li>
+                <li><a href="#"><i class="fas fa-globe-asia"></i> Browse</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Buy Books</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Favorite Books</a></li>
+                <li><a href="#"><i class="fas fa-th-list"></i> Whishlist</a></li>
+                <li><a href="#"><i class="far fa-clock fa-flip-horizontal"></i> History</a></li>
+            </menu>
+            <menu class="side-bar__menu--markers">
+                <li><a href="#"><i class="fas fa-circle"></i> Must Read Titles</a></li>
+                <li><a href="#"><i class="fas fa-circle"></i> Best Of List</a></li>
+                <li><a href="#"><i class="fas fa-circle"></i> Classic Novels</a></li>
+                <li><a href="#"><i class="fas fa-circle"></i> Non Fiction</a></li>
+            </menu>
+            <ul class="side-bar__last-updates">
+                <li>
+                    <i class="far fa-clock fa-flip-horizontal"></i>
+                    <span>
+                        You added <a href="#">Fight Club</a> by <a href="#">Chuck Palahniuk</a> to your <a href="#">Must Read Titles</a>.
+                        <pre>24 minutes ago</pre>
+                    </span>
+
+                </li>
+                <li>
+                    <i class="far fa-clock fa-flip-horizontal"></i>
+                    <span>
+                        You added <a href="#">The Trial</a> by <a href="#">Franz Kafka</a> to your <a href="#">Must Read Titles</a>.
+                        <pre>49 minutes ago</pre>
+                    </span>
+
+                </li>
+            </ul>
+        </aside>
+        <main class="container">
+            <header class="container__header">
+                Browse Available Books
+            </header>
+            <div class="container__sort-bar">
+                <menu class="container__sort-bar__sort-menu">
+                    <li><a href="#">All Books</a></li>
+                    <li><a href="#">Most Recent</a></li>
+                    <li><a href="#">Most Popular</a></li>
+                    <li><a href="#">Free Books</a></li>
+                </menu>
+                <input class="container__sort-bar__input" type="text" placeholder="Enter Keywords">
+            </div>
+            <ul class="container__content">
+                    <li>
+                        <img src="images/Jewels of Nizam.png">
+                        <pre class="container__content__book-name">Jewels of Nizam</pre>
+                        <pre class="container__content__book-author">by Geeta Devi</pre></li>
+                    <li>
+                        <img src="images/Cakes & Bakes.png">
+                        <pre class="container__content__row__book-name">Cakes & Bakes</pre>
+                        <pre class="container__content__row__book-author">by Sanjeev Kapoor</pre>
+                    </li>
+                    <li>
+                        <img src="images/Jamie's Kitchen.png">
+                        <pre class="container__content__row__book-name">Jamie's Kitchen</pre>
+                        <pre class="container__content__row__book-author">by Jamie Oliver</pre>
+                    </li>
+
+            </ul>
+        </main>
+    </main>
+    <footer class="main-footer">
+        <menu class="main-footer__buttons">
+            <li><a href="#"><i class="fas fa-question-circle"></i></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i></a></li>
+        </menu>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

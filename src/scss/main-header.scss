@@ -1,0 +1,68 @@
+$marker-colors: (#e64c66, #ffab00, #00bfdd);
+
+.main-header__markers {
+  margin-left: 2%;
+  width: 33%;
+
+  @for $i from 1 through 3 {
+    i:nth-child(#{$i}) {
+      color: nth($marker-colors, $i);
+    }
+  }
+}
+
+.main-header__title {
+  display: flex;
+  width: 34%;
+  justify-content: center;
+  color: #79839e;
+
+  i {
+    margin-right: 2%;
+  }
+}
+
+.main-header__info {
+  color: #79839e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 33%;
+  height: 100%;
+
+  li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2% 0 0;
+  height: 100%;
+  list-style: none;
+  width: 27%;
+  }
+
+  li:last-child {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  background-color: #0da5fa;
+  color: white;
+  width: 46%;
+
+    img {
+      border: 0.15vw solid white;
+      border-radius: 50%;
+      width: 17%;
+      height: auto;
+    }
+  }
+
+  a {
+    color: #79839e;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #79839e;
+  }
+}
