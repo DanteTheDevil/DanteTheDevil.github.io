@@ -10,3 +10,19 @@ const books = {
     'Jamie\'s italy': 'Jamie Oliver',
     'Vegetables Cookbook':'Matthew Biggs'
 };
+
+const contentObject = document.getElementsByClassName('container__content')[0];
+
+for(let book in books) {
+  let newBook = document.createElement('li');
+  let img = document.createElement('img');
+  let title = document.createElement('pre');
+  let author = document.createElement('pre');
+
+  img.setAttribute('src', `./images/${book}.png`);
+  title.innerHTML = `${book}`;
+  author.innerHTML = `${books[book]}`;
+  console.log(books[book]);
+  newBook.append(img, title, author);
+  contentObject.append(newBook);
+}
