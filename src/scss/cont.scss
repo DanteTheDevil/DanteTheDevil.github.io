@@ -75,9 +75,11 @@
   justify-items: center;
 
   li {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     float: left;
-    margin-left: 5%;
+    margin: 4% 0 0 5%;
   }
 
   pre {
@@ -85,47 +87,71 @@
   }
 }
 
-.container__content__row__book-name {
+.container__content__book-name {
+  margin-top: 16px;
   color: #444c63;
+  font-size: 16px;
 }
 
-.container__content__row__book-author {
+.container__content__book-author {
+  margin-top: 11px;
   color: #6f7d95;
+  font-size: 12px;
+}
+
+.container__content__book-rate {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    color: #ffab00;
+    margin-left: 1px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
 
 @media (max-width: 1260px) {
-  .container__content {
-    grid-template-columns: repeat(4, 25%);
-  }
   .container {
     width: 83%;
+  }
+
+  .container__content {
+    grid-template-columns: repeat(4, 25%);
   }
 }
 
 @media (max-width: 1060px) {
-  .container__content {
-    grid-template-columns: repeat(3, 33%);
-  }
   .container {
     width: 80%;
+  }
+
+  .container__content {
+    grid-template-columns: repeat(3, 33%);
   }
 }
 
 @media (max-width: 860px) {
-  .container__content {
-    grid-template-columns: repeat(2, 50%);
-  }
   .container {
     width: 77%;
+  }
+
+  .container__content {
+    grid-template-columns: repeat(2, 50%);
   }
 }
 
 @media (max-width: 660px) {
-  .container__content {
-    grid-template-columns: 100%;
-
-  }
   .container {
     width: 74%;
+  }
+
+  .container__content {
+    grid-template-columns: 100%;
   }
 }
