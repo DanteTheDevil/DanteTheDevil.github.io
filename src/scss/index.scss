@@ -1,21 +1,23 @@
 @font-face {
   font-family: 'Proxima Nova Rg';
   src: url('../fonts/ProximaNova-Regular.eot');
-  src: local('../fonts/Proxima Nova Regular'), local('ProximaNova-Regular'),
-  url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ProximaNova-Regular.woff') format('woff'),
-  url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+  src:
+    local('../fonts/Proxima Nova Regular'),
+    local('ProximaNova-Regular'),
+    url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   background-color: white;
-  font-family: Arial;
-  font-size: 1vw;
+  font-family: 'Proxima Nova Rg', Fallback, sans-serif;
+  font-size: 14px;
   margin: 0;
-  width: 1320px;
-  height: 990px;
+  min-width: 600px;
+  min-height: 600px;
 }
 
 .main-header {
@@ -23,10 +25,9 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #2f364a;
-  height: 8vh;
 }
 
-/*@import 'main-header';*/
+@import 'main-header';
 
 main {
   display: flex;
@@ -48,7 +49,7 @@ main {
   }
 }
 
-/*@import 'side-bar';*/
+@import 'side-bar';
 
 .container {
   display: flex;
@@ -57,7 +58,7 @@ main {
   flex-direction: column;
 }
 
-/*@import 'cont';*/
+@import 'cont';
 
 .main-footer {
   display: flex;
@@ -66,6 +67,5 @@ main {
   background-color: #181e2c;
 }
 
-/*@import 'main-footer';*/
-
+@import 'main-footer';
 

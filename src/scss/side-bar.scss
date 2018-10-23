@@ -1,7 +1,7 @@
 $side-bar-colors: (
-        background: #192134,
-        border-top: #232b3f,
-        border-bottom: #0c111f
+  background: #192134,
+  border-top: #232b3f,
+  border-bottom: #0c111f
 );
 $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
 
@@ -18,14 +18,13 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
 .side-bar__add-book__button {
   width: 80%;
   height: 38%;
-  font-size: 1vw;
   border-radius: 0.1vw;
   background-color: #f2795a;
   text-decoration: none;
   font-weight: bold;
   line-height: 26px;
   color: white;
-  outline:none;
+  outline: none;
   border: none;
 }
 
@@ -45,7 +44,7 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
   }
 
   a {
-    display:flex;
+    display: flex;
     align-items: center;
     text-decoration: none;
     height: 100%;
@@ -69,7 +68,7 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
   }
 }
 
-.side-bar__menu--markers{
+.side-bar__menu--markers {
   @extend .side-bar__menu;
   height: 20%;
 
@@ -78,7 +77,7 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
   }
 
   i {
-    font-size: 0.5vw;
+    font-size: 6px;
   }
 
   @for $i from 1 through 4 {
@@ -117,8 +116,31 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
     width: 70%;
 
     & > pre {
-      font-family: 'Proxima Nova Rg';
+      font-family: 'Proxima Nova Rg', Fallback, sans-serif;
     }
   }
 }
 
+@media (max-width: 1260px) {
+  .side-bar {
+    width: 17%;
+  }
+}
+
+@media (max-width: 1060px) {
+  .side-bar {
+    width: 20%;
+  }
+}
+
+@media (max-width: 860px) {
+  .side-bar {
+    width: 23%;
+  }
+}
+
+@media (max-width: 660px) {
+  .side-bar {
+    width: 26%;
+  }
+}

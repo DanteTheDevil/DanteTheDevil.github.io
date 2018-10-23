@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   height: 10%;
-  font-size: 2vw;
   line-height: 1.18;
   border-bottom: 1px solid #dadfea;
   vertical-align: middle;
+  font-size: 26px;
   padding-left: 2.2%;
   background-color: #eef1f7;
-  color: #444c63
+  color: #444c63;
 }
 
 .container__sort-bar {
@@ -63,24 +63,21 @@
   border-radius: 16px;
   outline: none;
   padding-left: 1.5%;
-  font-size: 1vw;
 }
 
 .container__content {
+  margin: 0;
+  padding: 2% 0 0 1%;
   height: 80%;
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(5, 20%);
+  justify-items: center;
 
   li {
     list-style: none;
     float: left;
     margin-left: 5%;
-  }
-
-  img {
-    width: 100%;
-    height: 70%;
   }
 
   pre {
@@ -93,6 +90,42 @@
 }
 
 .container__content__row__book-author {
-  font-size: 0.8vw;
   color: #6f7d95;
+}
+
+@media (max-width: 1260px) {
+  .container__content {
+    grid-template-columns: repeat(4, 25%);
+  }
+  .container {
+    width: 83%;
+  }
+}
+
+@media (max-width: 1060px) {
+  .container__content {
+    grid-template-columns: repeat(3, 33%);
+  }
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 860px) {
+  .container__content {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .container {
+    width: 77%;
+  }
+}
+
+@media (max-width: 660px) {
+  .container__content {
+    grid-template-columns: 100%;
+
+  }
+  .container {
+    width: 74%;
+  }
 }
