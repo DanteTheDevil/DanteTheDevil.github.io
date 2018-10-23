@@ -19,7 +19,7 @@ for(let book in books) {
   let title = document.createElement('pre');
   let author = document.createElement('pre');
 
-  img.setAttribute('src', `./images/${book}.png`);
+  img.setAttribute('src', `./build/images/${book}.png`);
   title.innerHTML = `${book}`;
   author.innerHTML = `${books[book]}`;
   console.log(books[book]);
