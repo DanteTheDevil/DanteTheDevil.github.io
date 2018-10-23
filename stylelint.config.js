@@ -13,14 +13,6 @@ module.exports = {
       ignorePseudoClasses: ["global"]
     }],
     "selector-max-id": 0,
-    "plugin/selector-bem-pattern": {
-      "componentName": "[A-Z]+",
-      "componentSelectors": {
-        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
-        "combined": "^\\.combined-{componentName}-[a-z]+$"
-      },
-      "utilitySelectors": "^\\.util-[a-z]+$"
-    },
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true
   }
