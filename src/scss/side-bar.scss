@@ -18,7 +18,7 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
 .side-bar__add-book__button {
   width: 80%;
   height: 38%;
-  border-radius: 0.1vw;
+  border-radius: 5px;
   background-color: #f2795a;
   text-decoration: none;
   font-weight: bold;
@@ -32,7 +32,7 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
   margin: 3% 0 0 0;
   color: #78829d;
   padding: 0;
-  height: 35%;
+  height: 30%;
   background-color: map-get($side-bar-colors, background);
   border-top: 1px solid map-get($side-bar-colors, border-top);
   border-bottom: 1px solid map-get($side-bar-colors, border-bottom);
@@ -96,7 +96,7 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
   margin: 3% 0 0 0;
   background-color: map-get($side-bar-colors, background);
   border-top: 1px solid map-get($side-bar-colors, border-top);
-  height: 42%;
+  height: 35%;
   color: #485469;
   padding: 0;
 

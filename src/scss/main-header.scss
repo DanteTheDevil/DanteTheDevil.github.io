@@ -54,12 +54,25 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd);
     img {
       border: 2px solid white;
       border-radius: 50%;
-      width: 17%;
-      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+
+      &:visited {
+        color: white;
+      }
     }
   }
 
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #79839e;
     text-decoration: none;
     height: 100%;
@@ -67,5 +80,61 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd);
     &:visited {
       color: #79839e;
     }
+  }
+}
+
+@media (max-width: 1260px) {
+  .main-header__markers {
+    width: 31%;
+  }
+
+  .main-header__title {
+    width: 32%;
+  }
+
+  .main-header__info {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1060px) {
+  .main-header__markers {
+    width: 30%;
+  }
+
+  .main-header__title {
+    width: 30%;
+  }
+
+  .main-header__info {
+    width: 40%;
+  }
+}
+
+@media (max-width: 860px) {
+  .main-header__markers {
+    width: 25%;
+  }
+
+  .main-header__title {
+    width: 25%;
+  }
+
+  .main-header__info {
+    width: 50%;
+  }
+}
+
+@media (max-width: 660px) {
+  .main-header__markers {
+    width: 25%;
+  }
+
+  .main-header__title {
+    width: 26%;
+  }
+
+  .main-header__info {
+    width: 47%;
   }
 }
