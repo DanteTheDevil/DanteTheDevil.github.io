@@ -131,17 +131,17 @@ $marker-colors: (#e64c66, #ffab00, #00bfdd, #7874cf);
 @media (max-width: 1060px) {
   .side-bar {
     width: 20%;
+    visibility: visible;
   }
 }
 
 @media (max-width: 860px) {
   .side-bar {
-    width: 23%;
+    width: 0;
+    visibility: hidden;
   }
 }
 
-@media (max-width: 660px) {
-  .side-bar {
-    width: 26%;
-  }
+@media (max-width: 715px) {
+
 }

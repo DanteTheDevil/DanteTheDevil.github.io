@@ -10,6 +10,7 @@ books.set('Jamie Does',{author: 'Jamie Oliver', rate: 4});
 books.set('Jamie\'s italy',{author: 'Jamie Oliver', rate: 5});
 books.set('Vegetables Cookbook',{author: 'Matthew Biggs', rate: 3});
 const contentObject = document.getElementsByClassName('container__content')[0];
+const menuButton = document.getElementsByClassName('main-header__markers--menu-btn')[0];
 
 for(let book of books) {
   const newBook = document.createElement('li');
@@ -37,3 +38,30 @@ for(let book of books) {
   newBook.append(img, title, author, rate);
   contentObject.append(newBook);
 }
+
+menuButton.setAttribute('clicked', false);
+menuButton.addEventListener('click', function(){
+  const menu = document.getElementsByClassName('side-bar')[0];
+  const content = document.getElementsByClassName('container')[0];
+  const buttonStatus = menuButton.getAttribute('clicked');
+  const addBookButton = document.getElementsByClassName('side-bar__add-book__button')[0];
+
+  if (buttonStatus === 'false') {
+    menu.style.width = '100%';
+    menu.style.visibility = 'visible';
+    content.style.width = 0;
+    content.style.visibility = 'hidden';
+    menuButton.setAttribute('clicked', true);
+    menuButton.innerHTML = '<i class="fas fa-times"></i>';
+    addBookButton.style.width = '30%';
+  }
+  else if (buttonStatus === 'true') {
+    menu.style.width = 0;
+    menu.style.visibility = 'hidden';
+    content.style.width = '100%';
+    content.style.visibility = 'visible';
+    menuButton.setAttribute('clicked', false);
+    addBookButton.style.width = '80%';
+    menuButton.innerHTML = '<i class="fas fa-th-list"></i>';
+  }
+});
